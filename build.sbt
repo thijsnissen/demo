@@ -1,35 +1,26 @@
-ThisBuild / name         := "scala-starter"
-ThisBuild / version      := "0.1.0"
-ThisBuild / scalaVersion := "3.3.1"
+ThisBuild / organization := "nl.thijsnissen"
+ThisBuild / version      := Version.version
+ThisBuild / scalaVersion := Version.scala
 
 lazy val root =
-	project
-		.in(file("."))
+  project
+    .in(file("."))
+    .settings(
+      name           := "Demo",
+      normalizedName := "demo",
+      description := "A demo app for learning the basics of application development in Scala"
+    )
+    .settings(Aliasses.common)
+    .aggregate(app)
 
-ThisBuild / libraryDependencies ++= Seq(
-	"org.scalatest" %% "scalatest" % "3.2.16" % "test",
-	"com.lihaoyi"   %% "pprint"    % "0.8.1"
-)
-
-ThisBuild / scalacOptions ++= Seq(
-	"-encoding", "utf8",
-	"-language:implicitConversions",
-	"-language:existentials",
-	"-deprecation",
-	"-feature",
-	"-unchecked",
-	"-Werror",
-)
+lazy val app =
+  project
+    .in(file("code/app"))
+    .settings(Settings.common ++ Settings.imports)
+    .settings(
+      libraryDependencies ++=
+        Dependencies.common ++ Dependencies.app ++ Dependencies.test
+    )
+    .enablePlugins(JibPlugin)
 
 ThisBuild / watchBeforeCommand := Watch.clearScreen
-
-ThisBuild / shellPrompt := {
-	(state: State) =>
-		s"sbt:${(ThisBuild / name).value}:" +
-			s"${Project.extract(state).currentProject.id}" +
-			s"${scala.Console.CYAN}>${scala.Console.RESET}"
-}
-
-Compile / run / fork := true
-Compile / run / connectInput := true
-Compile / run / javaOptions += "-Xmx4G"
