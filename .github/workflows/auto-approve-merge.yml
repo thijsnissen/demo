@@ -18,6 +18,7 @@ jobs:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       PR_URL: ${{ github.event.pull_request.html_url }}
       PR_TITLE: ${{ github.event.pull_request.title }}
+      
       HAS_LABEL: ${{ contains(github.event.pull_request.labels.*.name, env.LABEL) }}
       IS_AUTOMERGE_DISABLED: ${{ github.event.action == 'auto_merge_disabled' }}
     steps:
