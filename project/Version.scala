@@ -10,5 +10,5 @@ object Version {
   lazy val zio     = "2.1.3"
   lazy val zioJson = "0.7.0"
 
-  lazy val tapir = "1.10.9"
+  lazy val tapir = "1.10.10"
 }
