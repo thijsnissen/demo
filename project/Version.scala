@@ -7,7 +7,7 @@ object Version {
 
   lazy val scalatest = "3.2.18"
 
-  lazy val zio     = "2.1.3"
+  lazy val zio     = "2.1.5"
   lazy val zioJson = "0.7.1"
 
   lazy val tapir = "1.10.9"
