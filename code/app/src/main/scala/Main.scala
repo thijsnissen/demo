@@ -1,7 +1,6 @@
-import zio.*
-
-import scala.io.Source
 import scala.io.BufferedSource
+import scala.io.Source
+import zio.*
 
 object Main extends ZIOAppDefault:
   lazy val acquire: String => UIO[BufferedSource] =
