@@ -1,14 +1,14 @@
 object Version {
   lazy val version = "0.1.0"
-
-  lazy val scala = "3.4.2"
+  lazy val scala   = "3.4.2"
 
   lazy val pprint = "0.9.0"
 
-  lazy val scalatest = "3.2.18"
+  lazy val zio       = "2.1.5"
+  lazy val zioJson   = "0.7.1"
+  lazy val zioTest   = "2.1.5"
+  lazy val zioConfig = "4.0.2"
+  lazy val zioHttp   = "3.0.0-RC8"
 
-  lazy val zio     = "2.1.5"
-  lazy val zioJson = "0.7.1"
-
-  lazy val tapir = "1.10.9"
+  lazy val tapir = "1.10.10"
 }

@@ -6,12 +6,17 @@ object Dependencies {
   )
 
   lazy val app = Seq(
-    "dev.zio"                     %% "zio"                   % Version.zio,
-    "dev.zio"                     %% "zio-json"              % Version.zioJson,
+    "dev.zio" %% "zio"                 % Version.zio,
+    "dev.zio" %% "zio-json"            % Version.zioJson,
+    "dev.zio" %% "zio-config"          % Version.zioConfig,
+    "dev.zio" %% "zio-config-magnolia" % Version.zioConfig,
+    "dev.zio" %% "zio-http"            % Version.zioHttp,
     "com.softwaremill.sttp.tapir" %% "tapir-zio-http-server" % Version.tapir
   )
 
   lazy val test = Seq(
-    "org.scalatest" %% "scalatest" % Version.scalatest % "test"
+    "dev.zio" %% "zio-test"          % Version.zioTest % Test,
+    "dev.zio" %% "zio-test-sbt"      % Version.zioTest % Test,
+    "dev.zio" %% "zio-test-magnolia" % Version.zioTest % Test
   )
 }

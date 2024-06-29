@@ -1,5 +1,11 @@
-import org.scalatest.funsuite.AnyFunSuite
+import zio.*
+import zio.test.*
 
-class TestSpec extends AnyFunSuite:
-  test("Main"):
-    assertResult("Hello, world!")(Main.msg)
+object TestSpec extends ZIOSpecDefault:
+  lazy val spec: Spec[TestEnvironment & Scope, Any] =
+    suite("Main"):
+      test("prints to the Console"):
+        for
+          _ <- Main.run
+          o <- TestConsole.output
+        yield assertTrue(o.headOption contains "Hello, world!\n")
