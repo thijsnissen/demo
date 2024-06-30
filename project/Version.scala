@@ -8,7 +8,7 @@ object Version {
   lazy val zioJson   = "0.7.1"
   lazy val zioTest   = "2.1.5"
   lazy val zioConfig = "4.0.2"
-  lazy val zioHttp   = "3.0.0-RC8"
+  lazy val zioHttp   = "3.0.0-RC9"
 
   lazy val tapir = "1.10.10"
 }
