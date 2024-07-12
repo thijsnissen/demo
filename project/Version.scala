@@ -6,7 +6,7 @@ object Version {
 
   lazy val zio       = "2.1.6"
   lazy val zioJson   = "0.7.1"
-  lazy val zioTest   = "2.1.5"
+  lazy val zioTest   = "2.1.6"
   lazy val zioConfig = "4.0.2"
   lazy val zioHttp   = "3.0.0-RC9"
 
