@@ -10,5 +10,5 @@ object Version {
   lazy val zioConfig = "4.0.2"
   lazy val zioHttp   = "3.0.0-RC9"
 
-  lazy val tapir = "1.10.15"
+  lazy val tapir = "1.11.0"
 }
