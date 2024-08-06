@@ -4,7 +4,7 @@ object Version {
 
   lazy val pprint = "0.9.0"
 
-  lazy val zio       = "2.1.6"
+  lazy val zio       = "2.1.7"
   lazy val zioJson   = "0.7.1"
   lazy val zioTest   = "2.1.6"
   lazy val zioConfig = "4.0.2"
